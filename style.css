@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --pale-blue: #e0e8ff;
+    --bright-blue: #3829e0;
+/*Neutral*/
+    --very-pale-blue: #f5f7ff;
+    --desaturated-blue: #7280a7;
+    --dark-blue: #1f2f56;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Red Hat Display';
+}
+
+body{
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pale-blue);
+}
+
+#pattern-bg-desktop{
+    top: 0;
+    width: 100%;
+    position: absolute;
+    z-index: -10;
+}
+
+#pattern-bg-mobile{
+    display: none;
+}
+
+main{
+    min-width: 30rem;
+    width: 30rem;
+    border-radius: 25px;
+    background-color: var(--very-pale-blue);
+    box-shadow: 2px 1px 5px 1px #3829e043;
+}
+
+.img-principal{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 25px 0 0;
+}
+
+.img-principal img{
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+}
+
+.title{
+    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: 900;
+}
+
+.subtitle{
+    width: 65%;
+    margin: 1.5rem auto 0;
+    text-align: center;
+    color: var(--desaturated-blue);
+}
+
+.plans{
+    width: 65%;
+    margin: 1.5rem auto 0;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.container-icon-music{
+    width: 3.5rem;
+}
+
+#icon-music{
+    width: 100%;
+}
+
+.date-plan{
+    align-self: center;
+    margin-left: 1rem;
+}
+
+.date-plan p:nth-child(1){
+    font-weight: 900;
+}
+
+.date-plan p:nth-child(2){
+    color: var(--desaturated-blue);
+}
+
+.plans > p{
+    align-self: center;
+    text-align: right;
+    flex-grow: 1;
+}
+
+.plans > p a{
+    font-weight: 700;
+    color: var(--bright-blue);
+}
+
+button{
+    display: block;
+    width: 22rem;
+    margin: 1.5rem auto 0;
+    padding: 10px 0;
+    font-weight: 700;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.cancel-order{
+    display: block;
+    text-align: center;
+    width: 22rem;
+    margin: 1.5rem auto;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--desaturated-blue);
+}
+
+@media only screen and (max-width: 375px){
+    main{
+        width: 90%;
+    }
+    #pattern-bg-mobile{
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: -10;
+    }
+    #pattern-bg-desktop{
+        display: none;
+    }
+}
